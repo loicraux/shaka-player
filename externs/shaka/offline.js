@@ -507,9 +507,12 @@ shaka.extern.StorageMechanism = class {
    * Initialize the storage mechanism for first use. This should only be called
    * once. Calling |init| multiple times has an undefined behaviour.
    *
+   * @param {number} initializationTimeout The timeout in seconds before the
+   *   initialization of the storage mechanism is rejected because it takes too
+   *   long. Zero means there is no timeout.
    * @return {!Promise}
    */
-  init() {}
+  init(initializationTimeout) {}
 
   /**
    * Free all resources used by the storage mechanism and its cells. This should

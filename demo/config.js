@@ -472,7 +472,9 @@ shakaDemo.Config = class {
         .addBoolInput_('Use Persistent Licenses',
             'offline.usePersistentLicense')
         .addNumberInput_('Number of Parallel Downloads',
-            'offline.numberOfParallelDownloads');
+            'offline.numberOfParallelDownloads')
+        .addNumberInput_('Initialization Timeout',
+            'offline.initializationTimeout');
   }
 
   /** @private */

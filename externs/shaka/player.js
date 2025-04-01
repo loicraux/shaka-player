@@ -2532,7 +2532,8 @@ shaka.extern.LcevcConfiguration;
  *   downloadSizeCallback: function(number):!Promise<boolean>,
  *   progressCallback: function(shaka.extern.StoredContent,number),
  *   usePersistentLicense: boolean,
- *   numberOfParallelDownloads: number
+ *   numberOfParallelDownloads: number,
+ *   initializationTimeout: number
  * }}
  *
  * @property {function(shaka.extern.TrackList):
@@ -2562,6 +2563,10 @@ shaka.extern.LcevcConfiguration;
  *   Note: normally browsers limit to 5 request in parallel, so putting a
  *   number higher than this will not help it download faster.
  *   <br>
+ *   Defaults to <code>5</code>.
+ * @property {number} initializationTimeout
+ *   The timeout in seconds before the initialization of the offline storage
+ *   is rejected because it takes too long. Zero means there is no timeout.
  *   Defaults to <code>5</code>.
  * @exportDoc
  */
